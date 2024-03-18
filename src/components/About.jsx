@@ -2,16 +2,16 @@ import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { services } from '../constants';
+import { technologies } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({ index, title, icon }) => {
     return (
-        <Tilt className='xs:w-[250px] w-full'>
+        <Tilt className='xs:w-[180px] w-full'>
             <motion.div
                 variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-                className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+                className='w-full orange-yellow-gradient p-[1px] rounded-[20px] shadow-card'
             >
                 <div
                     options={{
@@ -19,7 +19,7 @@ const ServiceCard = ({ index, title, icon }) => {
                         scale: 1,
                         speed: 450
                     }}
-                    className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+                    className='bg-tertiary rounded-[20px] py-5 px-5 min-h-[200px] flex justify-evenly items-center flex-col'
                 >
                     <img
                         src={icon}
@@ -39,8 +39,8 @@ const About = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>Introduction</p>
-                <h2 className={styles.sectionHeadText}>Overview.</h2>
+                <p className={styles.sectionSubText}>About</p>
+                <h2 className={styles.sectionHeadText}>My Skill Set</h2>
             </motion.div>
 
             <motion.p
@@ -49,17 +49,18 @@ const About = () => {
             >
                 I'm Shakhzod (or you can call me Shak ), a web and mobile
                 developer residing in the scenic suburban area of Philadelphia,
-                PA. Originally from Uzbekistan, my journey has taken me across
-                the globe, spending two enriching years in Latvia before
-                settling in the United States six years ago.
+                PA. I am currently most famliar with HTML, CSS, Bootstrap, Tailwind CSS,
+                JavaScript, React and React Native. However, I am continuously
+                expanding my knowledge and actively seeking opportunities to
+                learn and grow each day.
             </motion.p>
 
-            <div className='mt-20 flex flex-wrap gap-10'>
-                {services.map((service, index) => (
+            <div className='mt-20 flex flex-wrap gap-5 justify-center'>
+                {technologies.map((technology, index) => (
                     <ServiceCard
-                        key={service.title}
+                        key={technology.title}
                         index={index}
-                        {...service}
+                        {...technology}
                     />
                 ))}
             </div>

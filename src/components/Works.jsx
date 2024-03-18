@@ -62,7 +62,7 @@ const Works = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>My projects</p>
+            <p className={styles.sectionSubText}>Overview of my</p>
                 <h2 className={styles.sectionHeadText}>Projects.</h2>
             </motion.div>
 
@@ -73,9 +73,8 @@ const Works = () => {
                 >
                     I recently completed the Nucamp coding bootcamp, earning my
                     stripes with a certification in Full Stack Web + Mobile
-                    Development. Coding isn't just a job for me; it's a passion.
-                    I find joy in creating seamless interfaces and tackling
-                    complex challenges.
+                    Development.<br /><br />
+                    You can take a look at my projects down below.
                 </motion.p>
             </div>
 
@@ -92,4 +91,4 @@ const Works = () => {
     );
 };
 
-export default SectionWrapper(Works, '');
+export default SectionWrapper(Works, 'works');
