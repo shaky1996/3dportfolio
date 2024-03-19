@@ -8,7 +8,7 @@ import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({ index, title, icon }) => {
     return (
-        <Tilt className='xs:w-[180px] w-full'>
+        <Tilt className='xs:w-[180px] w-[180px]'>
             <motion.div
                 variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
                 className='w-full orange-yellow-gradient p-[1px] rounded-[20px] shadow-card'
@@ -19,7 +19,7 @@ const ServiceCard = ({ index, title, icon }) => {
                         scale: 1,
                         speed: 450
                     }}
-                    className='bg-tertiary rounded-[20px] py-5 px-5 min-h-[200px] flex justify-evenly items-center flex-col'
+                    className='bg-primary rounded-[20px] py-5 px-5 min-h-[200px] flex justify-evenly items-center flex-col'
                 >
                     <img
                         src={icon}
@@ -47,9 +47,7 @@ const About = () => {
                 variants={fadeIn('', '', 0.1, 1)}
                 className='mt-4 text-secondary text-[17px] w-max-3xl leading-[30px]'
             >
-                I'm Shakhzod (or you can call me Shak ), a web and mobile
-                developer residing in the scenic suburban area of Philadelphia,
-                PA. I am currently most famliar with HTML, CSS, Bootstrap, Tailwind CSS,
+                I recently completed the Nucamp coding bootcamp, earning my stripes with a certification in Full Stack Web + Mobile Development. <br /><br />I am currently most famliar with HTML, CSS, Bootstrap, Tailwind CSS,
                 JavaScript, React and React Native. However, I am continuously
                 expanding my knowledge and actively seeking opportunities to
                 learn and grow each day.

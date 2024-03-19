@@ -16,8 +16,10 @@ import barcelona from './barcelona.png';
 import portfolio from './portfolio.png';
 import demo from './demo.png';
 import ufit from './ufit.png';
+import resume from './Shakhzod_Yuldashev_CV.pdf'
 
 export {
+    resume,
     barcelona,
     portfolio,
     demo,
