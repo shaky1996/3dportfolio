@@ -7,6 +7,7 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
+
 const Contact = () => {
     const formRef = useRef();
     const [form, setForm] = useState({
@@ -25,35 +26,37 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
 
-        emailjs.send(
-            'service_n4lej4t',
-            'template_oun3shd',
-            {
-                from_name: form.name,
-                to_name: 'Shakhzod',
-                from_email: form.email,
-                to_email: 'shakyuldashev@gmail.com',
-                message: form.message
-            },
-            'dqweT7L1KMn-6PdS0'
-        )
-        .then(() => {
-            setLoading(false)
-            alert('Thank you! I will get back to you soon!')
+        emailjs
+            .send(
+                import.meta.env.VITE_APP_SERVICE_ID,
+                import.meta.env.VITE_APP_TEMPLATE_ID,
+                {
+                    from_name: form.name,
+                    to_name: 'Shakhzod',
+                    from_email: form.email,
+                    to_email: 'shakyuldashev@gmail.com',
+                    message: form.message
+                },
+                import.meta.env.VITE_APP_PUBLIC_KEY
+            )
+            .then(
+                () => {
+                    setLoading(false);
+                    alert('Thank you! I will get back to you soon!');
 
-            setForm({
-                name: '',
-                email: '',
-                message: ''
-            })
-        }, (error) => {
-            setLoading(false)
+                    setForm({
+                        name: '',
+                        email: '',
+                        message: ''
+                    });
+                },
+                (error) => {
+                    setLoading(false);
 
-            console.log(error)
-            alert('Something went wrong :(\nPlease try again.')
-        }
-        
-        )
+                    console.log(error);
+                    alert('Something went wrong :(\nPlease try again.');
+                }
+            );
     };
 
     return (
