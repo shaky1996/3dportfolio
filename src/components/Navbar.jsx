@@ -6,8 +6,8 @@ import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
 
 const Navbar = () => {
-    const [active, setActive] = useState('');
-    const [toggle, setToggle] = useState(false);
+    const [active, setActive] = useState(''); // Active link state
+    const [toggle, setToggle] = useState(false); // toggle state
     return (
         <nav
             className={`
@@ -19,7 +19,7 @@ const Navbar = () => {
                     className='flex items-center gap-2'
                     onClick={() => {
                         setActive('');
-                        window.scrollTo(0, 0);
+                        window.scrollTo(0, 0); // scroll all the way up of the page
                     }}
                 >
                     <img
@@ -57,7 +57,7 @@ const Navbar = () => {
 
                     <div
                         className={`${
-                            !toggle ? 'hidden' : 'flex'
+                            !toggle ? 'hidden' : 'flex'  //responsive navbar logic
                         } p-6 bg-primary absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
                     >
                         <ul className='list-none flex justify-end items-start flex-col gap-4'>

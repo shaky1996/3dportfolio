@@ -7,7 +7,6 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
-
 const Contact = () => {
     const formRef = useRef();
     const [form, setForm] = useState({
@@ -82,7 +81,7 @@ const Contact = () => {
                             name='name'
                             value={form.name}
                             onChange={handleChange}
-                            placeholder="name"
+                            placeholder='name'
                             className='bg-slate-900 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
                         />
                     </label>
@@ -95,7 +94,7 @@ const Contact = () => {
                             name='email'
                             value={form.email}
                             onChange={handleChange}
-                            placeholder="email"
+                            placeholder='email'
                             className='bg-slate-900 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
                         />
                     </label>

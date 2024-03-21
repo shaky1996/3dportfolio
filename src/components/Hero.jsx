@@ -12,7 +12,10 @@ const Hero = () => {
                     <h1 className={`${styles.heroHeadText} text-white`}>
                         Hi, I'm
                     </h1>
-                    <h1 className={`${styles.heroHeadText} text-[#f1e343]`}> <span className='text-[#f1e343]'>Shakhzod</span></h1>
+                    <h1 className={`${styles.heroHeadText} text-[#f1e343]`}>
+                        {' '}
+                        <span className='text-[#f1e343]'>Shakhzod</span>
+                    </h1>
                     <p
                         className={`${styles.sectionSubText} mt-2 text-white-200 font-medium`}
                     >
@@ -22,12 +25,7 @@ const Hero = () => {
                     <div className='mt-5 flex'>
                         <button
                             class='bg-transparent hover:bg-[#f1e343] text-white-100 font-semibold hover:text-white py-2 px-4 border border-[#f1e343] hover:border-transparent rounded'
-                            onClick={() =>
-                                window.open(
-                                    resume,
-                                    '_blank'
-                                )
-                            }
+                            onClick={() => window.open(resume, '_blank')}
                         >
                             My Resume
                         </button>
